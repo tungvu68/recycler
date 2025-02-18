@@ -8,6 +8,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,6 +17,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        ArrayList<User> users = new ArrayList<>();
+        users.add(new User("User1", R.drawable.image1));
+        users.add(new User("User2", R.drawable.image2));
+        users.add(new User("User3", R.drawable.image3));
+        users.add(new User("User4", R.drawable.image3));
+        users.add(new User("User5", R.drawable.image2));
+        users.add(new User("User6", R.drawable.image1));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User8", R.drawable.image3));
+        users.add(new User("User9", R.drawable.image1));
 
     }
 }
