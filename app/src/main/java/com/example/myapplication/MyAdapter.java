@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +17,12 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private List<User> users;
+    private Context context;
 
-    public MyAdapter(List<User> users){
+
+    public MyAdapter(List<User> users, Context context){
         this.users = users ;
+        this.context = context ;
     }
     @NonNull
     @Override
@@ -32,11 +36,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         User user = users.get(position);
         holder.imageView.setImageResource(user.getImageId());
         holder.textView.setText(user.getName());
-        //su ly on lcick
+        //su ly on click
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText("")
+                Toast.makeText(context, user.getName(), Toast.LENGTH_LONG).show();
             }
         });
     }

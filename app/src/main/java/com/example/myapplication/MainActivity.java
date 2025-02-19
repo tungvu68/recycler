@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         users.add(new User("User9", R.drawable.image1));
 
         recyclerView = findViewById(R.id.recyclerView);
-        MyAdapter myAdapter = new MyAdapter(users);
+        MyAdapter myAdapter = new MyAdapter(users, this );
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
 
