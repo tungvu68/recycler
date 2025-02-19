@@ -44,11 +44,38 @@ public class MainActivity extends AppCompatActivity {
         users.add(new User("User8", R.drawable.image3));
         users.add(new User("User9", R.drawable.image1));
 
-
-
         recyclerView = findViewById(R.id.recyclerView);
         MyAdapter myAdapter = new MyAdapter(users);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+
+        //init recycler adapter reuse
+//        ArrayList<Man> mans = new ArrayList<>();
+//        mans.add(new Man("User1", R.drawable.image1));
+//        mans.add(new Man("User1", R.drawable.image1));
+//        mans.add(new Man("User1", R.drawable.image1));
+//        mans.add(new Man("User1", R.drawable.image1));
+//        mans.add(new Man("User1", R.drawable.image1));
+//        mans.add(new Man("User1", R.drawable.image1));
+//        mans.add(new Man("User1", R.drawable.image1));
+//        mans.add(new Man("User1", R.drawable.image1));
+//
+//        ArrayList<Integer> pics = new ArrayList<>();
+//        ArrayList<String> texts  = new ArrayList<>();
+//
+//
+//
+//        for(Man man: mans){
+//            pics.add(man.getImageId());
+//            texts.add(man.getName());
+//        }
+//
+//        MyAdapterRecycler myAdapterRecycler = new MyAdapterRecycler(pics, texts);
+//        recyclerView.setAdapter(myAdapterRecycler);
+//        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+//
+//
+
+
     }
 }

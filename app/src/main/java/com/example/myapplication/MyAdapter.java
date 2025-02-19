@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -15,7 +16,6 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private List<User> users;
-
 
     public MyAdapter(List<User> users){
         this.users = users ;
@@ -32,6 +32,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         User user = users.get(position);
         holder.imageView.setImageResource(user.getImageId());
         holder.textView.setText(user.getName());
+        //su ly on lcick
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText("")
+            }
+        });
     }
 
     @Override
