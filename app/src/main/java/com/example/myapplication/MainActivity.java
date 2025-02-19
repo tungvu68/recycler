@@ -7,10 +7,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +29,26 @@ public class MainActivity extends AppCompatActivity {
         users.add(new User("User5", R.drawable.image2));
         users.add(new User("User6", R.drawable.image1));
         users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
+        users.add(new User("User7", R.drawable.image2));
         users.add(new User("User8", R.drawable.image3));
         users.add(new User("User9", R.drawable.image1));
 
+
+
+        recyclerView = findViewById(R.id.recyclerView);
+        MyAdapter myAdapter = new MyAdapter(users);
+        recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
     }
 }

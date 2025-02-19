@@ -8,4 +8,20 @@ public class User {
         this.name   = user1;
         this.ImageId = image1;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getImageId() {
+        return ImageId;
+    }
+
+    public void setImageId(int imageId) {
+        ImageId = imageId;
+    }
 }
